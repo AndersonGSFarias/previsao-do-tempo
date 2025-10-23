@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Previsão do Tempo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0da6f2",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Space Grotesk"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <main class="relative flex h-auto min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden" style="font-family: 'Space Grotesk', 'Noto Sans', sans-serif">
+      <div class="flex flex-col items-center p-4 space-y-6 max-w-md w-full">
+        <h1 class="text-[#111618] dark:text-white tracking-light text-4xl font-bold leading-tight text-center">Previsão do Tempo</h1>
+        <section id="search-form" class="w-full">
+          <form class="w-full space-y-6">
+            <label class="flex flex-col w-full">
+              <p class="text-[#111618] dark:text-gray-300 text-base font-medium leading-normal pb-2">Estado</p>
+              <input id="input-localizacao" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111618] focus:outline-0 focus:ring-0 border border-[#dbe2e6] bg-white focus:border-primary h-14 placeholder:text-[#607c8a] p-[15px] text-base font-normal leading-normal dark:bg-background-dark dark:text-white dark:border-gray-600 dark:focus:border-primary dark:placeholder:text-gray-400" placeholder="Digite o estado" value="" />
+            </label>
+
+            <div class="w-full">
+              <button id="button-localizacao" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 w-full bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                <span class="truncate">Pesquisar</span>
+              </button>
+            </div>
+          </form>
+        </section>
+        <section id="tempo-info" class="flex flex-col items-center justify-center space-y-4 pt-6 text-center">
+
+        </section>
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
